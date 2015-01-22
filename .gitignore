@@ -14,7 +14,18 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+<<<<<<< HEAD
 
-#Mac OS files
+# Mac OS files
 /.DS_Store
 /*/.DS_Store
+
+/.idea/.name
+/.idea/ContactBook.iml
+/.idea/encodings.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/scopes/scope_settings.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+
