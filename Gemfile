@@ -28,6 +28,8 @@ gem 'spring',        group: :development
 
 gem 'tzinfo-data'
 
+gem 'restful-authentication'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
