@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150127100546) do
+ActiveRecord::Schema.define(version: 20150127105402) do
 
   create_table "access_tokens", force: true do |t|
     t.integer  "account_id"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20150127100546) do
     t.datetime "updated_at"
   end
 
+  add_index "clients", ["account_id"], name: "clients_account_id_fk", using: :btree
+
   create_table "refresh_tokens", force: true do |t|
     t.integer  "account_id"
     t.integer  "client_id"
@@ -54,8 +56,14 @@ ActiveRecord::Schema.define(version: 20150127100546) do
     t.datetime "updated_at"
   end
 
+  add_index "refresh_tokens", ["client_id"], name: "refresh_tokens_client_id_fk", using: :btree
+
   add_foreign_key "access_tokens", "accounts", name: "access_tokens_account_id_fk"
   add_foreign_key "access_tokens", "clients", name: "access_tokens_client_id_fk"
   add_foreign_key "access_tokens", "refresh_tokens", name: "access_tokens_refresh_token_id_fk"
+
+  add_foreign_key "clients", "accounts", name: "clients_account_id_fk"
+
+  add_foreign_key "refresh_tokens", "clients", name: "refresh_tokens_client_id_fk"
 
 end
