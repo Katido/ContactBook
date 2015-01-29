@@ -1,0 +1,1 @@
+ContactBook::Application.config.secret_token = 'b921f3aca55d3ce4bf71bd78b27db0a36d76751a04fc83a085ee836fdace45456e08814729fa8d064c46a17b9a29f2dcd81e0c95663f95560b98ab47ee402def'

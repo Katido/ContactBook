@@ -1,6 +1,5 @@
 class Client < ActiveRecord::Base
   has_many :access_tokens
-  has_many :refresh_tokens
   belongs_to :account
 
   before_validation :setup, :on => :create
@@ -11,6 +10,6 @@ class Client < ActiveRecord::Base
 
   def setup
     self.identifier = SecureToken.generate(16)
-    self.secret = SecureToken.generate
+    self.secret = SecureToken.generate(16)
   end
 end

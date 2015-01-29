@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  post 'authentication/token', :to => proc { |env| TokenEndpoint.new.call(env) }
+  get 'home/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -6,7 +9,7 @@ Rails.application.routes.draw do
    root 'home#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get 'home/index' => 'home#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

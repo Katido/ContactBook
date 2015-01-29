@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Client.delete_all()
+Account.delete_all()
+
+
+account = Account.new(username: 'admin', password: '123456')
+account.save!()
+
+client = Client.new(name: 'myapplication',account: account, website: "ContactBook", redirect_uri: "#" )
+client.save!()
