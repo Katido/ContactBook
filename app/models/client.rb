@@ -9,7 +9,7 @@ class Client < ActiveRecord::Base
   private
 
   def setup
-    self.identifier = SecureToken.generate(16)
-    self.secret = SecureToken.generate(16)
+    self.identifier = SecureRandom.base64(16)
+    self.secret = SecureRandom.base64(16)
   end
 end
