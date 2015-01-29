@@ -3,17 +3,12 @@
 <head>
   <title>ContactBook</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <script type="text/javascript" src="/assets/libs/require.js"></script>
+  <script type="text/javascript" src="/assets/libs/r.js"></script>
+  <script type="text/javascript" src="/assets/app/startup.js"></script>
 </head>
-<body>
-<% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-<%= yield %>
 
+<body>
+<%= yield %>
 </body>
 </html>

@@ -32,3 +32,9 @@
 /.idea/.generators
 /.idea/.rakeTasks
 /.idea/dictionaries
+/.idea/libraries
+/.idea/runConfigurations/Development__ContactBook.xml
+/.idea/runConfigurations/Production__ContactBook.xml
+/.idea/runConfigurations/spec__ContactBook.xml
+/.idea/runConfigurations/test__ContactBook.xml
+/.idea/watcherTasks.xml
