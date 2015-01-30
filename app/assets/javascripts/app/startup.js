@@ -28,7 +28,7 @@
     }
   });
 
-  require(['marrionette'], function(Marrionette) {
+  require(['marrionette', 'backbone'], function(Marrionette, Backbone) {
     var MyApp;
     MyApp = Marrionette.Application.extend({
       regions: {
@@ -39,6 +39,11 @@
     window.app = new MyApp({
       container: "#app"
     });
+    window.app.on('initialize:after', (function(_this) {
+      return function() {
+        return Backbone.history.start();
+      };
+    })(this));
     return window.app.start();
   });
 

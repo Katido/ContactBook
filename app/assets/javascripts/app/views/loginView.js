@@ -4,17 +4,17 @@
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   define(['marrionette'], function(Marrionette) {
-    var LoginController;
-    return LoginController = (function(_super) {
-      __extends(LoginController, _super);
+    var LoginView;
+    return LoginView = (function(_super) {
+      __extends(LoginView, _super);
 
-      function LoginController() {
-        return LoginController.__super__.constructor.apply(this, arguments);
+      function LoginView() {
+        return LoginView.__super__.constructor.apply(this, arguments);
       }
 
-      return LoginController;
+      return LoginView;
 
-    })(Marionette.Controller.extend);
+    })(Marionette.ItemView.extend);
   });
 
 }).call(this);

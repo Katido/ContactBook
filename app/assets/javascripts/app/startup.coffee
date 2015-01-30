@@ -19,11 +19,12 @@ requirejs.config
     'underscore':
       exports: '_'
 
-require ['marrionette'],(Marrionette)->
+require ['marrionette','backbone'],(Marrionette,Backbone)->
   MyApp = Marrionette.Application.extend(
     regions:
       'menu-region': '#menu-region'
       'page-region': '#content-region'
   )
   window.app = new MyApp({container: "#app"})
+  window.app.on 'initialize:after',()=> Backbone.history.start();
   window.app.start();
